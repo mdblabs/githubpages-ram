@@ -12,7 +12,7 @@ git clone https://github.com/mdblabs/githubpages-ram.git
 2. Enter githubpages-ram directory, and edit the Vagrantfile, in order to add the REPO tag:
 ```
 cd githubpages-ram
-vim Vagranfile
+vim Vagrantfile
 ```
 In Windows, you can use your favorite text editor.
 
