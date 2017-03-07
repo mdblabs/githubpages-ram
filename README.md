@@ -34,5 +34,5 @@ How-To
  http://localhost:4000
  ``` 
 
-You can now edit your page, in www/ folder. Once any file is modified, inside the www folder, the local copy will be automatically updated.
+You can now edit your page, inside www/ folder. Once any file is modified, the local copy will be automatically updated.
 Remote repository can be update, by using git, from www/ folder directly.
