@@ -1,23 +1,38 @@
-This repository consists of a Vagrant configuration plus provisioning Bash script that let you easily `vagrant up` a local mirror of any Github Pages repository. It accompanies my blog post: [Vagrant, Jekyll and Github Pages for streamlined content creation](http://kappataumu.com/articles/vagrant-jekyll-github-pages-streamlined-content-creation.html).
+This repository has been forked from:
+[this one.](https://github.com/kappataumu/vagrant-up-github-pages)
 
-Getting started is straightforward:
+It has been modified to include REPO variable on the Vagrantfile itself (instead of an environment variable).
 
-```
-$ git clone https://github.com/kappataumu/vagrant-up-github-pages.git
-$ cd vagrant-up-github-pages
-$ export REPO='https://github.com/kappataumu/kappataumu.github.com.git'
-$ vagrant up
-```
+How-To
+=====
+1. Clone the repo:
+'''
+git clone https://github.com/mdblabs/githubpages-ram.git
+'''
+2. Enter githubpages-ram directory, and edit the Vagrantfile, in order to add the REPO tag:
+'''
+cd githubpages-ram
+vim Vagranfile
+'''
+In Windows, you can use your favorite text editor.
 
-That's all there is to it. Now you can:
+3. Add the github pages REPO address, in line 6:
+'''
+REPO = "https://github.com/user/myexamplepage.github.io"
+'''
+Save it, and close it.
 
-1. Access your website by browsing to `http://localhost:4000`.
-2. Edit files locally, inside the `www` subfolder.
-3. Simply `vagrant up` directly in the future to start the guest (no bootstraping needed).
+4. Run Vagrant and provision:
+'''
+vagrant up
+'''
 
-Jekyll will: 
+A www folder will be created on your relative folder.it's  path can also be edited on the Vagrantfile (line 7, FOLDER tag).
 
-1. Recompile everything when changes are detected.
-2. Log all activity in `/home/vagrant/jekyll.log`.
-3. Automatically start serving your repo on every `vagrant up`.
+Once Vagrant is finished, you can visit your local webpage copy (by default on port 4000):
 
+'''
+http://localhost:4000
+''' 
+
+You can now edit your page as usual. Once any file is modified, inside thw www folder, the local copy will be updated. Then, you can update the remote repository, by using git as usual.
