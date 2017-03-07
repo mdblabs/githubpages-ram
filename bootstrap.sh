@@ -45,6 +45,9 @@ ruby --version
 # https://github.com/github/pages-gem
 gem install github-pages
 
+#Archives
+gem install jekyll-archives
+
 # Preemptively accept Github's SSH fingerprint, but only
 # if we previously haven't done so.
 fingerprint="$(ssh-keyscan -H github.com)"
