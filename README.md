@@ -26,7 +26,7 @@ How-To
  ```
  vagrant up
  ```
- A www/ folder will be created on your relative folder.it's  path can also be edited on the Vagrantfile (line 7, FOLDER tag).
+ A www/ folder will be created on your relative folder.It's path can also be edited on the Vagrantfile (line 7, FOLDER tag).
 
  Once Vagrant is finished, you can visit your local webpage copy (by default on port 4000):
 
