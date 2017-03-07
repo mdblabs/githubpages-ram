@@ -22,7 +22,7 @@ How-To
  ```
  Save it, and close it.
 
-4. Run Vagrant and provision:
+4. Run Vagrant to build the VM, and provisioning it:
  ```
  vagrant up
  ```
